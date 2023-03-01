@@ -26,3 +26,37 @@
        } 
     }
 
+//Rock, Paper, Scissors Console Game
+
+
+  function getComputerChoice(){
+    //List of options
+    const options = ['rock', 'paper', 'scissors'];
+    let botChoice = options[Math.floor(Math.random()*3)];
+    console.log(botChoice);
+    return botChoice;
+}
+
+function playRound(){
+    let playerChoice = prompt(`Rock, Paper or Scissors?`).toLowerCase();
+    let b = getComputerChoice();
+        //Round Comparisson
+    if (playerChoice === b){
+        return "It's a draw!";}
+    else if ((playerChoice === 'paper' && b === 'rock')||
+    (playerChoice === 'rock' && b === 'scissors')||
+    (playerChoice === 'scissors' && b === 'paper')) {
+         score++;
+        return "You Win!";}
+    else ((playerChoice === 'paper' && b === 'scissors')||
+    (playerChoice === 'rock' && b === 'paper')||
+    (playerChoice === 'scissors' && b === 'rock')){
+        score--;
+        return "You Lose!";}
+}
+
+function game(){
+    let score = 0;
+    
+    console.log(score);
+}
