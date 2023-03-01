@@ -2,36 +2,37 @@
     let add7 = (number) => number + 7;
     let multiply = (a, b) => a * b;
     let capitalize = (string) => {
-     const str2 = string.charAt(0).toUpperCase() + string.slice(1);
-     return str2;
-    }
+        const str2 = string.charAt(0).toUpperCase() + string.slice(1);
+        return str2;
+        }
     let lastLetter = (string) => string.charAt(string.length - 1);
 
     //FizzBuzz Console Game
-    function fizzBuzz(){
-       let number = parseInt(prompt(`Write a number`));
-       for (let i = 1; i <= number; i++){
-          if(i % 3 === 0 && i % 5 === 0){
-            console.log('FizzBuzz');
-          }  
-            
-          else if(i % 3 === 0){
-            console.log('Fizz');
-        } else if(i % 5 === 0){
-            console.log('Buzz');
-        }
-         else  {
-            console.log(i);
-        }
-       } 
+function fizzBuzz(){
+    let number = parseInt(prompt(`Write a number`));
+        for (let i = 1; i <= number; i++){
+            if(i % 3 === 0 && i % 5 === 0){
+                console.log('FizzBuzz');
+            } else if(i % 3 === 0){
+                    console.log('Fizz');
+                } else if(i % 5 === 0){
+                    console.log('Buzz');
+                }
+                else  {
+                    console.log(i);
+                }
+        } 
     }
 
 //Rock, Paper, Scissors Console Game
-
+//score holder
 let score = [];
+
 //List of options
 const options = ['rock', 'paper', 'scissors'];
- 
+
+//Functions to get the choices
+
 function getComputerChoice(){
     let botChoice = options[Math.floor(Math.random()*3)];
     console.log(`Computer choose: ${botChoice}`);
@@ -40,7 +41,7 @@ function getComputerChoice(){
 
 function getPlayerChoice(){
     let playerMove = prompt(`Rock, Paper or Scissors?`).toLowerCase();
-    //check for a valid input from the options list
+   //check for a valid input from the options list
     while (options.indexOf(playerMove) === -1) {
         playerMove = prompt('Select a valid option: Rock, Paper or Scissor.');}
     console.log(`You choose: ${playerMove}`);
@@ -65,8 +66,9 @@ function playRound(){
 
 //play game x Times
 function game(gameTimes){
-      //reset score
-      score = [];
+    //reset score
+    score = [];
+    
     //set score
         for (let i = 0; i < gameTimes; i++){
         let result = playRound();
