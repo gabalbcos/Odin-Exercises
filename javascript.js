@@ -89,3 +89,13 @@ function game(gameTimes){
         } else {console.log("You lost the game!");}
 }
 
+
+//Function to reverse a String
+function reverseString(string){
+//Separate words in a new array
+    let splitedStringArray = string.split(" ");
+//Iterate the array reverseing the words
+    let reversedStringArray = splitedStringArray.reverse().map(word => word.split("").reverse().join(""));
+    console.log(reversedStringArray.join(" "));
+    return reversedStringArray.join(" ");
+};
