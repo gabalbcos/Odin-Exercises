@@ -149,5 +149,15 @@ const leapYears = function(year) {
             return false;
     
         //return year % 4 === 0 && (year % 100 !== 0 || year % 400 === 0);
-        
-    };
+};
+
+//Functions to convert Fahrenheit to Celsius vice-versa
+function convertToCelsius(fahrenheit) {
+    let celsiusTemperature = ((parseFloat(fahrenheit) - 32)* (5/9));
+     return Math.round(celsiusTemperature * 10) / 10;
+};
+   
+   function convertToFahrenheit(celsius) {
+     let fahrenheitTemperature = ((parseFloat(celsius) * (9/5) +32));
+     return Math.round(fahrenheitTemperature * 10) / 10;
+};
