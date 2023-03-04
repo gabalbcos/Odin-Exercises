@@ -112,15 +112,27 @@ function removeFromArray() {
 };
 
 //Function to filter elements from arr2 from arr1
-function removeFromArray() {
-    //make array from the args to filter
-    const ARGS = Array.from(arguments);
-    const FILTER_ARGS = ARGS.slice(1,)
-    let arrayToFilter = Array.from(arguments[0]);
+function removeFromArray(array, ...args) {
+        //filtering the array in a simple form
 
-    //filtering the array
-    const filteredArray = arrayToFilter.filter(item => !FILTER_ARGS.includes(item));
+        return array.filter(item => !args.includes(item));
+};
 
-    //return result
-    return filteredArray;
+//Function that sums the numbers in an interval
+function sumAll(){
+    let arr = [num1, num2];
+    //sorting the array
+    const SORTED_ARRAY =  arr.sort((a,b)=>a-b);
+    let sumTotal = 0;
+
+    //filtering
+    if (SORTED_ARRAY[0] < 0 || SORTED_ARRAY[1] < 0 || typeof SORTED_ARRAY[0] !== 'number'|| typeof SORTED_ARRAY[1] !== 'number'){
+        return 'ERROR';
+    }
+
+    //summing
+    for (let i= SORTED_ARRAY[0]; i <= SORTED_ARRAY[1]; i++){
+    sumTotal += i;
+    }
+    return sumTotal;
 };
