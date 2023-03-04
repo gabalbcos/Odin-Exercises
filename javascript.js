@@ -100,7 +100,7 @@ function reverseString(string){
     return reversedStringArray.join(" ");
 };
 
-//function test - making array from args
+//Function test - making array from args
 function removeFromArray() {
     //arguments is an object
     console.log(arguments);
@@ -109,4 +109,18 @@ function removeFromArray() {
     //slice the part that will be used to filter the array[0]
     const filterArgs = args.slice(1,)
     console.log(filterArgs);
-}
+};
+
+//Function to filter elements from arr2 from arr1
+function removeFromArray() {
+    //make array from the args to filter
+    const ARGS = Array.from(arguments);
+    const FILTER_ARGS = ARGS.slice(1,)
+    let arrayToFilter = Array.from(arguments[0]);
+
+    //filtering the array
+    const filteredArray = arrayToFilter.filter(item => !FILTER_ARGS.includes(item));
+
+    //return result
+    return filteredArray;
+};
