@@ -99,3 +99,14 @@ function reverseString(string){
     console.log(reversedStringArray.join(" "));
     return reversedStringArray.join(" ");
 };
+
+//function test - making array from args
+function removeFromArray() {
+    //arguments is an object
+    console.log(arguments);
+    //create array from the arguments object
+    const args = Array.from(arguments);
+    //slice the part that will be used to filter the array[0]
+    const filterArgs = args.slice(1,)
+    console.log(filterArgs);
+}
