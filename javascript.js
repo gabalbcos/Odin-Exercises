@@ -136,3 +136,18 @@ function sumAll(){
     }
     return sumTotal;
 };
+
+//Function to check if it's  leap year
+const leapYears = function(year) {
+
+    let determineYear = parseInt(year);
+    
+        if (determineYear % 4 === 0 && determineYear % 100 !== 0 || determineYear % 400 === 0){
+            console.log(`${determineYear} is a leap year!`);
+            return true;}
+        console.log(`${determineYear} is not a leap year`);
+            return false;
+    
+        //return year % 4 === 0 && (year % 100 !== 0 || year % 400 === 0);
+        
+    };
